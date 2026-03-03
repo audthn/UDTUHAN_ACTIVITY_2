@@ -1,0 +1,34 @@
+What are the codes to clear all data entered in the textboxes when the New/Cancel button is clicked? (all textboxes).
+
+
+private void Form1_Load(object sender, EventArgs e)
+{
+    var programs = new[]
+    {
+        "Bachelor of Science in Computer Science",
+        "Bachelor of Science in Cybersecurity",
+        "Bachelor of Science in Information Technology",
+        "Bachelor of Science in Nursing",
+        "Bachelor of Science in Marine Engineering",
+        "Bachelor of Science in Marine Transportation",
+        "Bachelor of Science in Biology (Medical Biology)",
+        "Bachelor of Science in Medical Laboratory Science (Medical Technology)",
+        "Bachelor of Science in Pharmacy",
+        "Bachelor of Science in Radiologic Technology",
+        "Bachelor of Science in Accountancy",
+        "Bachelor of Science in Business Administration (various majors)",
+        "Bachelor of Science in Customs Administration",
+        "Bachelor of Science in Criminology",
+        "Bachelor of Forensic Science",
+        "Bachelor of Arts in Communication",
+        "Bachelor of Arts in Psychology",
+        "Bachelor of Science in Psychology",
+        "Bachelor of Multimedia Arts",
+        "Bachelor of Science in International Tourism Management",
+        "Bachelor of Science in International Hospitality Management"
+    };
+
+    comboBox1.Items.Clear();
+    comboBox1.Items.AddRange(programs);
+    if (comboBox1.Items.Count > 0) comboBox1.SelectedIndex = 0;
+}

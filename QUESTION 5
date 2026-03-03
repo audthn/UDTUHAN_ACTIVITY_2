@@ -1,0 +1,19 @@
+What are the codes to transfer all data entered in the textboxes to their corresponding ListBoxes and TextBoxes when the Submit button is clicked?
+
+
+private class ProgramItem { public int Id { get; set; } public string Name { get; set; } }
+
+private void Form1_Load(object sender, EventArgs e)
+{
+    var programs = new List<ProgramItem>
+    {
+        new ProgramItem { Id = 1, Name = "Bachelor of Science in Computer Science" },
+        new ProgramItem { Id = 2, Name = "Bachelor of Science in Cybersecurity" },
+        // ...
+    };
+
+    comboBox1.DataSource = programs;
+    comboBox1.DisplayMember = "Name";
+    comboBox1.ValueMember = "Id";
+    comboBox1.SelectedIndex = 0;
+}
